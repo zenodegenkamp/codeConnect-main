@@ -66,52 +66,52 @@ export default function Dashboard() {
     return <h1>Error: {error.message}</h1>
   }
   return (
-    <div className="pb-[5px]"> 
-    <div className="flex flex-col md:flex-row items-start mb-4 p-4 font-poppins">
-      <h1 className="text-2xl text-white">Welcome {user?.email}!</h1>
-    </div>
-  
-    <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
-  
-      <section className="w-full md:w-1/3 bg-gray-900 p-6 rounded-lg text-white">
-        <div className="info">
-          <p>
-            Your due payments for <span className="font-bold">the end of the month</span>
-          </p>
-          <h2 className="text-3xl font-semibold">$2,260</h2>
-        </div>
-        <Link to="income" className="text-white mt-4 block">Details</Link>
-      </section>
-  
-      <section className="w-full md:w-1/3 bg-gray-900 p-6 rounded-lg text-white">
-        <h2 className="text-2xl font-semibold">Review score</h2>
-        <div className="flex items-center">
-          <BsStarFill className="star text-pink-500 text-2xl" />
-          <p className="text-xl"><span className="font-bold">5.0</span>/5</p>
-        </div>
-        <Link to="reviews" className="text-white mt-4 block">Details</Link>
-      </section>
-  
-      <section className="w-full md:w-1/3 bg-gray-900 p-6 rounded-lg text-white">
-        <h2 className="text-2xl font-semibold">
-          Currently{" "}
-          <span className="font-bold">2 </span>
-          active projects
-        </h2>
-      </section>
-  
-    </div>
-  
-    <section className="max-w-5xl mx-auto bg-gray-900 p-6 rounded-lg text-white mt-8">
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-semibold">Your listed projects</h2>
-        <Link to="projects" className="text-white">View all</Link>
+    <div className="pb-[5px]">
+      <div className="flex flex-col md:flex-row items-start mb-4 p-4 font-poppins">
+        <h1 className="text-2xl text-white">Welcome {user?.email}!</h1>
       </div>
-      {loading && !projects ? (
-        <h1>Loading...</h1>
-      ) : (
 
-        <div className="mt-[20px] flex lg:flex-row flex-col min-h-[400px] gap-5">
+      <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+
+        <section className="w-full md:w-1/3 bg-gray-900 p-6 rounded-lg text-white">
+          <div className="info">
+            <p>
+              Your due payments for <span className="font-bold">the end of the month</span>
+            </p>
+            <h2 className="text-3xl font-semibold">$2,260</h2>
+          </div>
+          <Link to="income" className="text-white mt-4 block">Details</Link>
+        </section>
+
+        <section className="w-full md:w-1/3 bg-gray-900 p-6 rounded-lg text-white">
+          <h2 className="text-2xl font-semibold">Review score</h2>
+          <div className="flex items-center">
+            <BsStarFill className="star text-pink-500 text-2xl" />
+            <p className="text-xl"><span className="font-bold">5.0</span>/5</p>
+          </div>
+          <Link to="reviews" className="text-white mt-4 block">Details</Link>
+        </section>
+
+        <section className="w-full md:w-1/3 bg-gray-900 p-6 rounded-lg text-white">
+          <h2 className="text-2xl font-semibold">
+            Currently{" "}
+            <span className="font-bold">2 </span>
+            active projects
+          </h2>
+        </section>
+
+      </div>
+
+      <section className="max-w-5xl mx-auto bg-gray-900 p-6 rounded-lg text-white mt-8">
+        <div className="flex justify-between items-center">
+          <h2 className="text-2xl font-semibold">Your listed projects</h2>
+          <Link to="projects" className="text-white">View all</Link>
+        </div>
+        {loading && !projects ? (
+          <h1>Loading...</h1>
+        ) : (
+
+          <div className="mt-[20px] flex lg:flex-row flex-col min-h-[400px] gap-5">
             {projects.map((project, index) => (
               <ExploreCard
                 key={project.id}
@@ -119,7 +119,7 @@ export default function Dashboard() {
                 index={index}
                 active={active}
                 handleClick={setActive}
-               
+
               />
             ))}
           </div>
@@ -130,10 +130,10 @@ export default function Dashboard() {
         <LogoutButton navigate={navigate} />
       </div>
 
-      </div>
- 
+    </div>
+
   )
-  }
+}
 
 
 
