@@ -25,7 +25,7 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 import heroImg from './heroImg.png';
 import CodeConnect from './CodeConnect.png'
-import dashboard from "./Dashboard.png";
+import dashboard from "./dashboard.png";
 import aboutus from './aboutus.png'
 
 export {
