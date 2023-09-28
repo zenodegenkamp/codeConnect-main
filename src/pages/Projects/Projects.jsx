@@ -129,8 +129,8 @@ export default function Projects() {
           </div>
 
         {/* gradient start */}
-        <div className="absolute z-[0] w-[40%] h-[40%] -left-1/2 bottom-0 rounded-full white__gradient" />
-          <div className="absolute z-[2] w-[40%] h-[40%] -left-1/2 bottom-0 rounded-full pink__gradient" />
+        <div className=" sm:hidden block absolute z-[0]  w-[40%] h-[40%] -left-1/2 bottom-0 rounded-full white__gradient" />
+          <div className=" sm:hidden  block absolutez-[2] bot-10 left-20 w-[40%] h-[40%] -left-1/2 bottom-0 rounded-full pink__gradient" />
           {/* gradient end */}
       </section>
     )
