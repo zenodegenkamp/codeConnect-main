@@ -53,7 +53,7 @@ export default function HostProjects() {
   return (
 
     <div className="h-screen">
-    <section className="text-gray-300 py-8 bg-gray-900 mt-6">
+    <section className="text-gray-300 py-8 bg-gray-900 mt-6 rounded-lg">
       <h1 className="px-4 text-2xl font-semibold text-gray-300 mb-4">Your assigned projects</h1>
       <div className="px-4 ">
         {projects.length > 0 ? (
