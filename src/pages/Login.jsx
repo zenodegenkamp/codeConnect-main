@@ -50,23 +50,23 @@ export default function Login() {
     }
 
     return (
-        <div className="relative z-[5] flex flex-col items-center justify-start text-white login-container h-screen">
+        <div className="z-[5] flex flex-col items-center justify-start text-white login-container h-screen ">
             {location.state?.message && (
-                <h3 className="login-error text-white">{location.state.message}</h3>
+                <h3 className="login-error flex flex-col items-center justify-start text-white">{location.state.message}</h3>
             )}
             <h1 className="text-2xl font-semibold mt-8 mb-6">Sign in to your account</h1>
             {error?.message && <h3 className="login-error">{error.message}</h3>}
 
             <form onSubmit={handleSubmit} className=" max-w-md login-form">
 
-                <div className="flex flex-col">
+                <div className="flex flex-col items-center justify-center">
                 <input
                     name="email"
                     onChange={handleChange}
                     type="email"
                     placeholder="Email address"
                     value={loginFormData.email}
-                    className="w-[200px] mb-4 mr-4 px-4 py-2 border-b border-gray-100 rounded-none bg-gray-900 text-white focus:outline-none focus:border-purple-600"
+                    className="w-[250px] mb-4 px-4 py-2 border-b border-gray-100 rounded-none bg-gray-900 text-white focus:outline-none focus:border-purple-600"
                 />
                 <input
                     name="password"
@@ -74,13 +74,13 @@ export default function Login() {
                     type="password"
                     placeholder="Password"
                     value={loginFormData.password}
-                    className="w-[200px] mb-4 w-100 px-4 py-2 border-b border-gray-100 rounded-none bg-gray-900 text-white focus:outline-none focus:border-purple-600"
+                    className="w-[250px] mb-4 w-100 px-4 py-2 border-b border-gray-100 rounded-none bg-gray-900 text-white focus:outline-none focus:border-purple-600"
                 />
                 </div>
                
                 <button
                     disabled={status === "submitting"}
-                    className={`w-[200px] flex justify-center items-center button-gradient text-white mt-6 md:mb-0 py-2 px-4 font-poppins font-medium text-[12px] text-primary  rounded-[10px] outline-none mr-4`}
+                    className={`w-[200px] flex justify-center items-center button-gradient text-white mt-6 md:mb-0 py-2 px-4 font-poppins font-medium text-[12px] text-primary  rounded-[10px] outline-none ml-6`}
                 >
                     {status === "submitting" ? "Logging in..." : "Log in"}
                 </button>

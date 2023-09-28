@@ -19,6 +19,10 @@
  
 }
 
+body {
+    background-color: black;
+}
+
 .button-gradient {
     background: rgb(254,254,254);
 background: linear-gradient(202deg, rgba(254,254,254,1) 0%, rgba(174,103,250,1) 37%);

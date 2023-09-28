@@ -79,14 +79,14 @@ export default function Projects() {
 
 
     return (
-        <section className={`${styles.paddings} relative h-screen`} id="explore">
+        <section className={`${styles.paddings} h-screen`} id="explore">
 
             <div className="flex items-center justify-center text-white z-[5]  p-6 rounded-[24px]"> 
                     <button
                         onClick={() => handleFilterChange("type", "front-end")}
                         className={
                             `
-                         ${typeFilter === "front-end" ? "button-gradient" : "bg-discount-gradient"} text-white mb-4 md:mb-0 py-2 px-4 font-poppins font-medium text-[18px] text-primary  rounded-[10px] outline-none mr-4 ${styles}`
+                         ${typeFilter === "front-end" ? "button-gradient" : "bg-discount-gradient"} text-white md:mb-0 py-2 px-4 font-poppins font-medium text-[18px] text-primary  rounded-[10px] outline-none mr-4 ${styles}`
                         }
                     >Front-end</button>
                     <button
@@ -135,49 +135,3 @@ export default function Projects() {
       </section>
     )
 }
-
-// <div className="project-list-container">
-//             <div className="project-list-header">
-//             <h1 className="project-list-h1"><span className="highligted-text">Explore</span> the available projects</h1>
-//             <div className="project-list-filter-buttons">
-//                 <button
-//                     onClick={() => handleFilterChange("type", "front-end")}
-//                     className={
-//                         `project-type simple 
-//                         ${typeFilter === "front-end" ? "selected" : ""}`
-//                     }
-//                 >Front-end</button>
-//                 <button
-//                     onClick={() => handleFilterChange("type", "back-end")}
-//                     className={
-//                         `project-type luxury 
-//                         ${typeFilter === "back-end" ? "selected" : ""}`
-//                     }
-//                 >Back-end</button>
-//                 <button
-//                     onClick={() => handleFilterChange("type", "ux-design")}
-//                     className={
-//                         `project-type rugged 
-//                         ${typeFilter === "ux-design" ? "selected" : ""}`
-//                     }
-//                 >Ux-design</button>
-
-//                 {typeFilter ? (
-//                     <button
-//                         onClick={() => handleFilterChange("type", null)}
-//                         className="project-type clear-filters"
-//                     >Clear filter</button>
-//                 ) : null}
-
-//             </div>
-//             </div>
-//             <div className="project-list">
-//                 {projectElements}
-               
-//             </div>
-//             <div className="project-list-bottom-section">
-//             { <Spline 
-//                 zIndex="-1"
-//                 className="spline-background-projects"scene="https://prod.spline.design/xo9Z214VQTCYaekx/scene.splinecode" /> }
-//             </div>
-//         </div>
